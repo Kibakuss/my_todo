@@ -1,46 +1,48 @@
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
+// import 'package:my_todo/pages/today_page.dart';
 
-class AddScreen extends StatefulWidget {
-  const AddScreen({Key? key}) : super(key: key);
+// class AddScreen extends StatefulWidget {
+//   const AddScreen({Key? key}) : super(key: key);
 
-  @override
-  State<AddScreen> createState() => _AddScreenState();
-}
+//   @override
+//   State<AddScreen> createState() => _AddScreenState();
+// }
 
-class _AddScreenState extends State<AddScreen> {
-  @override
-  Widget build(BuildContext context) {
-    final _searchController = TextEditingController();
+// class _AddScreenState extends State<AddScreen> {
+//   TextEditingController searchController = TextEditingController();
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Новая задача"),
-      ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              controller: _searchController,
-              decoration: InputDecoration(
-                labelText: "Поиск",
-                filled: true,
-                fillColor: Colors.white.withAlpha(235),
-                border: OutlineInputBorder(),
-              ),
-            ),
-          ),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text("Сохранить"))
-        ],
-      ),
-      //Button(),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Новая задача"),
+//       ),
+//       body: Column(
+//         children: [
+//           Padding(
+//             padding: const EdgeInsets.all(8.0),
+//             child: TextField(
+//               controller: searchController,
+//               decoration: InputDecoration(
+//                 labelText: "Поиск",
+//                 filled: true,
+//                 fillColor: Colors.white.withAlpha(235),
+//                 border: OutlineInputBorder(),
+//               ),
+//             ),
+//           ),
+//           ElevatedButton(
+//               onPressed: () {
+//                 // Navigator.pop(context);
+//                 addItemToList();
+//               },
+//               child: Text("Сохранить"))
+//         ],
+//       ),
+//       //Button(),
+//     );
+//   }
+// }
 
 // class TextFieldWidget extends StatefulWidget {
 //   const TextFieldWidget({Key? key}) : super(key: key);

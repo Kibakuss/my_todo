@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_todo/pages/add_task.dart';
+
 import 'package:my_todo/pages/today_page.dart';
 
 class MainScreen extends StatefulWidget {
@@ -48,31 +48,6 @@ class _MainScreenState extends State<MainScreen> {
           ),
         ],
         onTap: (onSelectedTab),
-      ),
-    );
-  }
-}
-
-class TodayPage extends StatefulWidget {
-  const TodayPage({Key? key}) : super(key: key);
-
-  @override
-  State<TodayPage> createState() => _TodayPageState();
-}
-
-class _TodayPageState extends State<TodayPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ListView(),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => AddScreen()));
-        },
-        backgroundColor: Colors.blue,
-        elevation: 5,
-        child: Icon(Icons.add),
       ),
     );
   }
