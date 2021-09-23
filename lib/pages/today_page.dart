@@ -20,7 +20,7 @@ class _TodayPageState extends State<TodayPage> {
             return Dismissible(
               key: Key(todoList[index]),
               child: Card(
-                color: Colors.grey[300],
+                color: Colors.grey[50],
                 child: ListTile(
                   title: Text(todoList[index]),
                   trailing: IconButton(
@@ -30,7 +30,7 @@ class _TodayPageState extends State<TodayPage> {
                         });
                       },
                       icon: Icon(Icons.delete),
-                      color: Colors.grey[800]),
+                      color: Colors.red[600]),
                 ),
               ),
               onDismissed: (direction) {
@@ -42,12 +42,15 @@ class _TodayPageState extends State<TodayPage> {
             );
           }),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.green,
+        backgroundColor: Colors.orange[700],
         onPressed: () {
           showDialog(
               context: context,
               builder: (BuildContext context) {
                 return AlertDialog(
+                  shape: RoundedRectangleBorder(
+                      side: BorderSide(color: Colors.yellow, width: 2),
+                      borderRadius: BorderRadius.all(Radius.circular(15))),
                   title: Text("Добавить задачу"),
                   content: TextField(
                     onChanged: (String value) {
@@ -55,14 +58,20 @@ class _TodayPageState extends State<TodayPage> {
                     },
                   ),
                   actions: [
-                    ElevatedButton(
-                        onPressed: () {
-                          setState(() {
-                            todoList.add(_userToDo);
-                          });
-                          Navigator.of(context).pop();
-                        },
-                        child: Text("Добавить"))
+                    Center(
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.orangeAccent, // background
+                            onPrimary: Colors.white, // foreground
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              todoList.add(_userToDo);
+                            });
+                            Navigator.of(context).pop();
+                          },
+                          child: Text("Добавить")),
+                    )
                   ],
                 );
               });

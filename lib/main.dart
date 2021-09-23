@@ -13,15 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Flutter Demo",
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.orange[400],
         ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
-          backgroundColor: Colors.white38,
-          selectedItemColor: Colors.red,
-          unselectedItemColor: Colors.grey,
+          backgroundColor: Colors.orange[600],
+          selectedItemColor: Colors.blue[50],
+          unselectedItemColor: Colors.white70,
         ),
       ),
       home: MainScreen(),
