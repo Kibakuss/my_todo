@@ -55,6 +55,9 @@ class _TodayPageState extends State<TodayPage> {
                   content: TextField(
                     onChanged: (String value) {
                       _userToDo = value;
+                      // if (value == null) {
+                      //   return Navigator.of(context).pop();
+                      // }
                     },
                   ),
                   actions: [

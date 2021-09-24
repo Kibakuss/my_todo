@@ -14,7 +14,7 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
   late String _title;
   @override
-  initState() {
+  void initState() {
     _title = 'Задачи';
   }
 
